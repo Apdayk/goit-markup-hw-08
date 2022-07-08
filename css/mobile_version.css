@@ -153,6 +153,7 @@ img {
   position: absolute;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  top: 10px;
   right: 0;
   -webkit-transition: -webkit-transform 250ms var(--time-function);
   transition: -webkit-transform 250ms var(--time-function);
@@ -162,4 +163,4 @@ img {
 .nav-box.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=mobile_version.css.map */
