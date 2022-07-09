@@ -1,13 +1,18 @@
 .header__logo {
-  margin-right: 93px;
+  @media screen and(min-width:480px) {
+    margin-right: 88px;
+  }
+  @media screen and(min-width:1200px) {
+    margin-right: 93px;
+  }
 }
 
 .logo {
+  position: relative;
+  display: flex;
+  flex-grow: 0.1;
   font-family: 'Raleway';
   @include font(700, 26px, 1.19, null);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   &__web {
     color: var(--brand-color-accent);
   }

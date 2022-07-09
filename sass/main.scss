@@ -1,24 +1,24 @@
-// @import './utils/variables'; //Переменные и утилитарные классы
+@import './utils/variables'; //Переменные и утилитарные классы
 
 // //База
-// @import './components/desktop_version/base/header'; //Шапка
-// @import './components/desktop_version/base/footer'; //Подвал
+@import './components/desktop_version/base/header'; //Шапка
+@import './components/desktop_version/base/footer'; //Подвал
 
-// //Студия
-// @import './components/desktop_version/studio/hero'; //Секция с заголовоко H1
-// @import './components/desktop_version/studio/qualities'; //Качества компании
-// @import './components/desktop_version/studio/products'; //Чем мы занимаемся
-// @import './components/desktop_version/studio/team'; //Наша команда
-// @import './components/desktop_version/studio/clients'; //Клиенты
+//Студия
+@import './components/desktop_version/studio/hero'; //Секция с заголовоко H1
+@import './components/desktop_version/studio/qualities'; //Качества компании
+@import './components/desktop_version/studio/products'; //Чем мы занимаемся
+@import './components/desktop_version/studio/team'; //Наша команда
+@import './components/desktop_version/studio/clients'; //Клиенты
 
-// //Портфолио
-// @import './components/desktop_version/portfolio/gallery'; //Галерея
+//Портфолио
+@import './components/desktop_version/portfolio/gallery'; //Галерея
 
-// //Переопределяемые блоки
-// @import './components/desktop_version/multi_block/logo'; //Логотип (Шапка, футор)
-// @import './components/desktop_version/multi_block/social_btn'; //Кнопки социальных сетей (Студия, футор)
-// @import './components/desktop_version/multi_block/subs-form'; //Форма подписки (Футор)
-// @import './components/desktop_version/multi_block/modal'; //Модальное окно (Студия)
-// @import './components/desktop_version/multi_block/filter_btn'; //Кнопки фильтра (Портфолио)
+//Переопределяемые блоки
+@import './components/desktop_version/multi_block/logo'; //Логотип (Шапка, футор)
+@import './components/desktop_version/multi_block/social_btn'; //Кнопки социальных сетей (Студия, футор)
+@import './components/desktop_version/multi_block/subs-form'; //Форма подписки (Футор)
+@import './components/desktop_version/multi_block/modal'; //Модальное окно (Студия)
+@import './components/desktop_version/multi_block/filter_btn'; //Кнопки фильтра (Портфолио)
 
-@import './components/mobile_version/mobile_version.scss'; //
+// @import './components/mobile_version/mobile_version.scss'; //
