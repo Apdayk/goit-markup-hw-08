@@ -1,47 +1,65 @@
 /* ----------Шапка--------- */
 .header {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #ececec;
-  background: var(--brand-color_6);
   &-box {
     display: flex;
     align-items: center;
-    height: 60px;
-    @media screen and(min-width:768px) {
-      justify-content: center;
-    }
+  }
+  @media screen and(min-width:768px) {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ececec;
+    background: var(--brand-color_white);
   }
 }
 
 /* Навигация в шапке */
 
 .nav {
-  display: flex;
   & a:hover,
   & a:focus {
     color: var(--brand-color-accent);
   }
   &__link {
-    display: block;
-    padding: 32px 0;
-    color: var(--brand-color_3);
-    @include font(500, 14px, 1.14, 0.02em);
+    color: var(--brand-color_black);
+    @include font(500, 40px, 1.18, 0.02em);
     transition: color 250ms var(--time-function);
-  }
-  &__item {
-    position: relative;
   }
   &__link--current {
     color: var(--brand-color-accent);
-    &::after {
+  }
+  @media screen and(max-width:480px) {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+
+    &:last-child {
+      margin-bottom: 302px;
+    }
+  }
+  @media screen and(min-width:1200px) {
+    display: flex;
+    gap: 50px;
+
+    &__link {
+      display: block;
+      padding: 32px 0;
+      @include font(500, 14px, 1.14, 0.02em);
+    }
+    &__item {
+      position: relative;
+    }
+    &__item:last-child {
+      margin-right: 305px;
+    }
+
+    &__link--current::after {
       content: '';
       position: absolute;
       bottom: 0;
       display: block;
       width: 100%;
       height: 4px;
-      background: var(--brand-color-accent);
+      background-color: var(--brand-color-accent);
       border-radius: 2px;
     }
   }
@@ -51,11 +69,15 @@
 
 .contacts {
   @media screen and(max-width:480px) {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 32px;
+    & {
+      margin-bottom: 64px;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 32px;
+    }
     &__link {
-      padding: 0;
+      @include font(500, 34px, 1.17, 0.02em);
+      color: var(--brand-color-accent);
     }
     &__icon {
       display: none;
@@ -65,34 +87,21 @@
     display: flex;
     gap: 30px;
     &__link {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      transition: color 250ms var(--time-function);
       padding: 32px 0;
+      @include font(500, 14px, 1.14, 0.02em);
+      color: var(--brand-color-text);
     }
-  }
-  &__link {
-    display: inline-flex;
-    align-items: center;
-    @include font(500, 14px, 1.14, 0.02em);
-    color: var(--brand-color-text);
-    transition: color 250ms var(--time-function);
-  }
-  &__link:hover,
-  &__link:focus {
-    color: var(--brand-color-accent);
-  }
-  &__icon {
-    margin-right: 10px;
-    fill: currentColor;
-  }
-}
-
-@media screen and(max-width:480px) {
-  #tell {
-    @include font(500, 34px, 1.17, 0.02em);
-    color: var(--brand-color-accent);
-  }
-  #email {
-    @include font(500, 24px, 1.17, 0.02em);
-    color: var(--brand-color-text);
+    &__link:hover,
+    &__link:focus {
+      color: var(--brand-color-accent);
+    }
+    &__icon {
+      fill: currentColor;
+    }
   }
 }
 
@@ -100,15 +109,19 @@
 
 .mobile {
   &__btn {
-    margin-left: auto;
-    border: none;
-    background-color: transparent;
-    @media screen and(min-width:481px) {
-      display: none;
+    display: none;
+    @media screen and(max-width: 480px) {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      display: flex;
+      border-style: none;
+      padding: 0;
+      background-color: var(--brand-color_white);
     }
   }
-
   &__icon--close {
+    text-align: center;
     display: none;
   }
   &__btn.is-open {
@@ -121,100 +134,62 @@
   &__btn.is-open &__icon--close {
     display: block;
   }
+}
 
-  @media screen and (min-width: 768px) {
-    display: none;
+// Мобильная версия---Окно
+
+.mob-menu {
+  @media screen and(max-width: 480px) {
+    & {
+      display: none;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow: auto;
+      padding-left: 40px;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--brand-color_white);
+    }
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 1;
+    }
   }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 // Мобильная версия---Навигация
-
-.mob-menu {
-  @media screen and (max-width: 480px) {
-    display: none;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    // overflow: auto;
-    overflow: hidden;
-
-    padding-left: 40px;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--brand-color_6);
-  }
-
-  @media screen and(min-width:481px) {
-    display: flex;
-    align-items: center;
-  }
-
-  &.is-open {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    z-index: 1;
-
-    @media screen and(min-width:768px) {
-      flex-direction: row;
-    }
-  }
-}
-
-.nav {
-  @media screen and(max-width:480px) {
-    margin-right: 0;
-    gap: 34px;
-    &__link {
-      @include font(500, 40px, 1.17, 0.02em);
-    }
-
-    &__link--current::after {
-      display: none;
-    }
-    display: flex;
-    flex-direction: column;
-    &__link {
-      padding: 0;
-      margin: 0;
-    }
-  }
-  @media screen and(min-width:481px) {
-    margin-right: 300px;
-    gap: 50px;
-  }
-}
-
 .header-social {
   &__list {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 64px;
-    @media screen and (min-width: 481px) {
-      display: none;
-    }
   }
-  &__item {
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-    padding-left: 10px;
+  &__item:nth-child(-n + 3) {
     padding-right: 10px;
   }
-  &__item-inst {
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-    padding-right: 10px;
-  }
-  &__item-lidin {
+  &__item + &__item {
+    border-left: 1px solid var(--brand-color-text);
     padding-left: 10px;
   }
   &__link {
     @include font(500, 18px, 1.22, 0.02em);
     color: var(--brand-color-accent);
   }
-  @media screen and (min-width: 481px) {
-    display: none;
+
+  @media screen and(min-width: 481px) {
+    &__list {
+      display: none;
+    }
   }
 }

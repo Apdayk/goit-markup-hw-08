@@ -18,7 +18,7 @@
     margin-top: 20px;
     @include font(null, 14px, 1.71, null);
     font-style: normal;
-    color: var(--brand-color_6);
+    color: var(--brand-color_white);
   }
   &__contact {
     display: block;
@@ -34,9 +34,9 @@
     display: block;
     @include font(700, 14px, 1.14, null);
     text-transform: uppercase;
-    color: var(--brand-color_6);
+    color: var(--brand-color_white);
   }
   &__icon {
-    fill: var(--brand-color_6);
+    fill: var(--brand-color_white);
   }
 }

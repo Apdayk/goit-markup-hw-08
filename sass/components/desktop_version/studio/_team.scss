@@ -10,7 +10,7 @@
     padding-bottom: 30px;
     text-align: center;
     border-radius: 0px 0px 4px 4px;
-    background-color: var(--brand-color_6);
+    background-color: var(--brand-color_white);
   }
   &__name {
     @include font(500, 16px, 1.19, null);
@@ -37,4 +37,3 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
   }
 }
-

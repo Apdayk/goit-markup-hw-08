@@ -4,7 +4,7 @@
     @include font(700, 14px, 1.14, null);
     text-transform: uppercase;
 
-    color: var(--brand-color_6);
+    color: var(--brand-color_white);
   }
   &__box {
     display: flex;
@@ -18,7 +18,7 @@
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
-    color: var(--brand-color_6);
+    color: var(--brand-color_white);
     background-color: #2f303a;
   }
   &__input::placeholder {
@@ -33,7 +33,7 @@
     height: 50px;
     @include font(700, 16px, 1.9, 0.06em);
 
-    color: var(--brand-color_6);
+    color: var(--brand-color_white);
     background-color: var(--brand-color-accent);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
@@ -47,6 +47,6 @@
   }
   &__btn-icon {
     margin-left: 10px;
-    fill: var(--brand-color_6);
+    fill: var(--brand-color_white);
   }
 }

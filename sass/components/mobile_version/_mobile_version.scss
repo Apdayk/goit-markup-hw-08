@@ -1,10 +1,10 @@
 :root {
   --brand-color-hero-footer: #2f303a;
   --brand-color-accent: #2196f3;
-  --brand-color_3: #212121;
+  --brand-color_black: #212121;
   --brand-color_4: #e5e5e5;
   --brand-color-text: #757575;
-  --brand-color_6: #ffffff;
+  --brand-color_white: #ffffff;
   --fone-svg-img: #f5f4fa;
   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -30,7 +30,7 @@
 body {
   font-family: 'roboto', 'sans-serif';
   letter-spacing: 0.03em;
-  color: var(--brand-color_3);
+  color: var(--brand-color_black);
 }
 
 .container {
@@ -68,7 +68,7 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--brand-color_3);
+  color: var(--brand-color_black);
 }
 
 ul {
@@ -101,7 +101,7 @@ img {
 
 .header-box {
   position: relative;
-  background-color: var(--brand-color_6);
+  background-color: var(--brand-color_white);
   height: 60px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -129,11 +129,11 @@ img {
   }
 
   &__studio {
-    color: var(--brand-color_3);
+    color: var(--brand-color_black);
   }
 
   &__studio--color {
-    color: var(--brand-color_6);
+    color: var(--brand-color_white);
   }
 }
 
@@ -141,7 +141,7 @@ img {
 
 .mobile-btn {
   border: none;
-  background-color: var(--brand-color_6);
+  background-color: var(--brand-color_white);
   padding: 0;
   display: inline-flex;
   margin-left: auto;
@@ -183,7 +183,7 @@ img {
     color: var(--brand-color-accent);
   }
   &-box {
-    background-color: var(--brand-color_6);
+    background-color: var(--brand-color_white);
     position: absolute;
     transform: translateX(100%);
     top: 45px;

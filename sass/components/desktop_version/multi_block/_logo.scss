@@ -8,9 +8,9 @@
 }
 
 .logo {
-  position: relative;
   display: flex;
-  flex-grow: 0.1;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: 'Raleway';
   @include font(700, 26px, 1.19, null);
   &__web {
@@ -18,10 +18,10 @@
   }
 
   &__studio {
-    color: var(--brand-color_3);
+    color: var(--brand-color_black);
   }
 
   &__studio--color {
-    color: var(--brand-color_6);
+    color: var(--brand-color_white);
   }
 }
