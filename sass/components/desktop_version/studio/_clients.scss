@@ -1,14 +1,21 @@
 .clients__title {
-  @include font(700, 36px, 1.17, null);
   text-align: center;
+  @media screen and(max-width:1199px) {
+    font-size: 28px;
+  }
+  @media screen and(min-width:1200px) {
+    @include font(700, 36px, 1.17, null);
+  }
 }
 
 .clients-list {
   display: flex;
-  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
   &__link {
     @include flexCentr;
-    width: 170px;
+    width: 210px;
     height: 92px;
     border-width: 1px;
     border-style: solid;
@@ -16,8 +23,9 @@
     border-radius: 4px;
     transition: border-color 250ms var(--time-function);
   }
-  &__item {
-    margin-left: 30px;
+  &__icon {
+    fill: #afb1b8;
+    transition: fill 250ms var(--time-function);
   }
   &t__link:hover,
   &t__link:focus {
@@ -27,11 +35,16 @@
   &__link:focus &__icon {
     fill: var(--brand-color-accent);
   }
-  &__item:first-child {
-    margin-left: 0;
+
+  @media screen and(min-width:481px) and (max-width: 1199px) {
+    &__link {
+      width: 226px;
+    }
   }
-  &__icon {
-    fill: #afb1b8;
-    transition: fill 250ms var(--time-function);
+  @media screen and(min-width:1200px) {
+    margin-top: 50px;
+    &__link {
+      width: 170px;
+    }
   }
 }

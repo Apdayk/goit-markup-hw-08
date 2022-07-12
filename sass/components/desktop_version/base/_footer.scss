@@ -2,17 +2,15 @@
   margin-top: 20px;
 }
 
-.footer__subs-form {
-  margin-left: 93px;
-}
-
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   margin: auto;
   background-color: var(--brand-color-hero-footer);
-  &__box {
+  &__address-box {
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &__address {
     margin-top: 20px;
@@ -27,9 +25,6 @@
     font-style: normal;
     color: rgba(255, 255, 255, 0.6);
   }
-  &__icon-box {
-    margin-left: 70px;
-  }
   &__text {
     display: block;
     @include font(700, 14px, 1.14, null);
@@ -38,5 +33,58 @@
   }
   &__icon {
     fill: var(--brand-color_white);
+  }
+  @media screen and (max-width: 480px) {
+    &__address-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    &__text {
+      margin-top: 60px;
+      text-align: center;
+    }
+  }
+  @media screen and(min-width:481px) and (max-width: 1199px) {
+    &__text {
+      text-align: center;
+    }
+    &__address-icon-box {
+      display: flex;
+    }
+    &__address-box {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    &__logo-address-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__icon-box {
+      margin-bottom: 55px;
+    }
+    &__address-contact {
+      text-align: center;
+    }
+  }
+  @media screen and(min-width:1200px) {
+    &__box {
+      display: flex;
+    }
+
+    &__icon-box {
+      margin-top: 12px;
+      margin-left: 70px;
+    }
+    &__address-box {
+      align-items: normal;
+      flex-direction: row;
+    }
+    &__subs-form {
+      margin-top: 12px;
+      margin-left: 93px;
+    }
   }
 }

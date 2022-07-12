@@ -22,13 +22,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
-  transform: translate(-50%, -50%) scale(1);
-
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   margin-top: auto;
   padding: 40px;
+
+  transform: translate(-50%, -50%) scale(1);
 
   background-color: #ffffff;
   border-radius: 4px;
@@ -131,11 +130,12 @@
   }
 
   &__label-checkbox {
-    @include flexCentr;
+    @include flexCentr($ai: baseline);
   }
 
   &__checkbox-text {
-    @include font(null, 14px, 1.71, null);
+    @include font(null, 12px, 1.17, null);
+    white-space: nowrap;
 
     color: #757575;
   }
@@ -191,5 +191,12 @@
   &__btn:hover,
   &__btn:focus {
     background-color: #188ce8;
+  }
+  @media screen and(min-width:1200px) {
+    width: 528px;
+    min-height: 581px;
+    &__checkbox-text {
+      @include font(null, 14px, 1.71, null);
+    }
   }
 }

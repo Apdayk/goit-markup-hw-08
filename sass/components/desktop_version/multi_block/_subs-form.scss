@@ -49,4 +49,25 @@
     margin-left: 10px;
     fill: var(--brand-color_white);
   }
+  @media screen and(min-width:1200px) {
+    &__subs-form {
+      margin-top: 12px;
+      margin-left: 93px;
+    }
+  }
+  @media screen and(max-width:1199px) {
+    &__text {
+      margin-top: 60px;
+      text-align: center;
+    }
+    &__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    &__input {
+      width: 450px;
+    }
+  }
 }
