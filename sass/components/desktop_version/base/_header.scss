@@ -3,12 +3,12 @@
   &-box {
     display: flex;
     align-items: center;
-  }
-  @media screen and(max-width:480px) {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    height: 60px;
   }
   @media screen and(min-width:768px) {
+    &-box {
+      height: 80px;
+    }
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #ececec;
@@ -19,32 +19,27 @@
 /* Навигация в шапке */
 
 .nav {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
   &__link {
+    @include font(500, 40px, 1.18, 0.02em);
+    transition: color 250ms var(--time-function);
+
     color: var(--brand-color_black);
   }
   & a:hover,
   & a:focus {
     color: var(--brand-color-accent);
   }
+
   &__link--current {
     color: var(--brand-color-accent);
   }
-
-  @media screen and(max-width:480px) {
+  @media screen and(min-width:768px) {
     display: flex;
-    flex-direction: column;
-    gap: 34px;
-    &__link {
-      color: var(--brand-color_black);
-      @include font(500, 40px, 1.18, 0.02em);
-      transition: color 250ms var(--time-function);
-    }
-  }
-
-  @media screen and(min-width:481px) {
-    display: flex;
-    gap: 50px;
-
+    flex-direction: row;
+    margin-left: 83px;
     &__link {
       display: block;
       padding: 32px 0;
@@ -53,6 +48,7 @@
     &__item {
       position: relative;
     }
+
     &__link--current::after {
       content: '';
       position: absolute;
@@ -64,43 +60,37 @@
       border-radius: 2px;
     }
   }
-  @media screen and(min-width:481px) and (max-width: 1199px) {
-    &__item:last-child {
-      margin-right: 84px;
-    }
-  }
-
   @media screen and(min-width:1200px) {
-    &__item:last-child {
-      margin-right: 305px;
-    }
+    margin-left: 93px;
   }
 }
 
 /* Контакты в шапке */
 
 .contacts {
-  @media screen and(max-width:480px) {
-    & {
-      margin-bottom: 64px;
-      display: flex;
-      flex-direction: column-reverse;
-      gap: 32px;
-    }
-    &__link {
-      @include font(500, 34px, 1.17, 0.02em);
-      color: var(--brand-color-accent);
-    }
-    &__icon {
-      display: none;
-    }
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 32px;
+
+  &__link {
+    @include font(500, 34px, 1.17, 0.02em);
+    color: var(--brand-color-accent);
   }
-  @media screen and(min-width:481px) and (max-width: 1199px) {
-    display: flex;
+  &__link--styles {
+    @include font(500, 24px, 1.17, 0.02em);
+    color: var(--brand-color-text);
+  }
+  &__icon {
+    display: none;
+  }
+  @media screen and(min-width:768px) {
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 0;
+
     &__link {
-      display: inline-flex;
+      // display: inline-flex;
       gap: 8px;
       align-items: center;
       @include font(500, 12px, 1.17, 0.02em);
@@ -137,15 +127,15 @@
 
 .mobile {
   &__btn {
-    display: none;
-    @media screen and(max-width: 480px) {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      display: flex;
-      border-style: none;
-      padding: 0;
-      background-color: var(--brand-color_white);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    border-style: none;
+    padding: 0;
+    background-color: var(--brand-color_white);
+    @media screen and(min-width:768px) {
+      display: none;
     }
   }
   &__icon--close,
@@ -180,41 +170,35 @@
 // Мобильная версия---Окно
 
 .mob-menu {
-  @media screen and(max-width: 480px) {
-    & {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      overflow: auto;
-      padding-left: 40px;
-      padding-top: 48px;
-      padding-bottom: 48px;
-      width: 100vw;
-      height: 100vh;
-      background-color: var(--brand-color_white);
-    }
+  @media screen and(max-width:767px) {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    padding-left: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--brand-color_white);
+
     &.is-open {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      z-index: 1;
     }
   }
-  @media screen and(min-width:481px) and (max-width: 1199px) {
+
+  @media screen and(min-width:768px) {
     display: flex;
     align-items: center;
   }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-  }
 }
-
 .no-scroll {
   overflow: hidden;
 }
 
-// Мобильная версия---Навигация
 .header-social {
   &__list {
     display: flex;
@@ -231,7 +215,7 @@
     color: var(--brand-color-accent);
   }
 
-  @media screen and(min-width: 481px) {
+  @media screen and(min-width: 768px) {
     &__list {
       display: none;
     }

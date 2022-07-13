@@ -1,6 +1,6 @@
 .clients__title {
   text-align: center;
-  @media screen and(max-width:1199px) {
+  @media screen and(max-width:1200px) {
     font-size: 28px;
   }
   @media screen and(min-width:1200px) {
@@ -36,7 +36,7 @@
     fill: var(--brand-color-accent);
   }
 
-  @media screen and(min-width:481px) and (max-width: 1199px) {
+  @media screen and(min-width:481px) and (max-width: 1200px) {
     &__link {
       width: 226px;
     }
