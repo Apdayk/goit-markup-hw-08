@@ -1,6 +1,8 @@
 .subs-form {
   &__text {
     display: block;
+    margin-top: 60px;
+    text-align: center;
     @include font(700, 14px, 1.14, null);
     text-transform: uppercase;
 
@@ -8,12 +10,15 @@
   }
   &__box {
     display: flex;
+    gap: 20px;
+    flex-direction: column;
     margin-top: 20px;
+    align-items: center;
   }
   &__input {
     padding-left: 16px;
-
-    width: 358px;
+    width: 100%;
+    max-width: 358px;
     height: 50px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -26,10 +31,10 @@
 
     color: rgba(255, 255, 255, 0.6);
   }
-  &__button {
+  &__btn {
     @include flexCentr;
-    margin-left: 12px;
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: 50px;
     @include font(700, 16px, 1.9, 0.06em);
 
@@ -49,25 +54,29 @@
     margin-left: 10px;
     fill: var(--brand-color_white);
   }
+  @media screen and(min-width:768px) {
+    &__input {
+      width: 100%;
+      max-width: 450px;
+    }
+  }
+
   @media screen and(min-width:1200px) {
+    &__text {
+      margin-top: 0;
+      text-align: left;
+    }
     &__subs-form {
       margin-top: 12px;
       margin-left: 93px;
     }
-  }
-  @media screen and(max-width:1200px) {
-    &__text {
-      margin-top: 60px;
-      text-align: center;
+    &__input {
+      width: 415px;
     }
     &__box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    &__input {
-      width: 450px;
+      flex-direction: row;
+      gap: 12px;
+      margin-top: 20px;
     }
   }
 }
