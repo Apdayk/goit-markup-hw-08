@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Портфолио</title>
+    <title>ВЕБ-Студия</title>
+    <link type="image/x-icon" href="./images/favicon/favicon.ico" rel="shortcut icon">
+    <link type="Image/x-icon" href="./images/favicon/favicon.ico" rel="icon">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -20,41 +22,73 @@
   <body>
     <header class="header">
       <div class="header-box container">
-        <a class="logo header__logo" href="./index.html">
-          <span lang="en" class="logo__web">Web</span>
-          <span lang="en" class="logo__studio">Studio</span>
-        </a>
-        <nav>
-          <ul class="nav">
-            <li class="nav__item">
-              <a class="nav__link" href="./index.html">Студия</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--current" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="/">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="contacts contacts__header">
-          <li class="contacts__item">
-            <a class="contacts__link" href="info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="10">
-                <use href="./images/svg/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="+380961111111">
-              <svg class="contacts__icon" width="12" height="16">
-                <use href="./images/svg/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <a class="logo" href="./index.html">
+          <span class="logo__web">Web</span>Studio</a>
+        <button
+          type="button"
+          class="mobile__btn"
+          aria-expanded="false"
+          aria-label="Переключатель мобильного меню"
+          data-menu-button
+        >
+          <svg width="40" height="40">
+            <use
+              class="mobile__icon--close"
+              href="./images/svg/icons.svg#icon-mobile-menu-close"
+            ></use>
+            <use class="mobile__icon--menu" href="./images/svg/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+        <div class="mob-menu" data-menu>
+          <nav>
+            <ul class="nav">
+              <li class="nav__item">
+                <a class="nav__link" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--current" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="/">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-wrap">
+            <ul class="contacts">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--styles" href="info@devstudio.com">
+                  <svg class="contacts__icon" width="16" height="10">
+                    <use href="./images/svg/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="+380961111111">
+                  <svg class="contacts__icon" width="12" height="16">
+                    <use href="./images/svg/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+            <ul class="header-social__list">
+              <li class="header-social__item">
+                <a href="" class="header-social__link">Instagram</a>
+              </li>
+              <li class="header-social__item">
+                <a href="" class="header-social__link">Twitter</a>
+              </li>
+              <li class="header-social__item">
+                <a href="" class="header-social__link">Facebook</a>
+              </li>
+              <li class="header-social__item">
+                <a href="" class="header-social__link">LinkedIn</a>
+              </li>
+            </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -85,10 +119,10 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/mobile/mobile_webp@1x/mob_project_img_1@1x.webp 1x,
-                        ./images/mobile/mobile_webp@2x/mob_project_img_1@2x.webp 2x
+                        ./images/desktop/desktop_webp@1x/project_img_1@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_1@2x.webp 2x
                       "
-                      media="(max-width: 480px)"
+                      media="(min-width: 1200px)"
                       type="image/webp"
                     />
                     <source
@@ -96,23 +130,21 @@
                         ./images/tablet/tablet_webp@1x/tabl_project_img_1@1x.webp 1x,
                         ./images/tablet/tablet_webp@2x/tabl_project_img_1@2x.webp 2x
                       "
-                      media="(max-width: 1199px)"
+                      media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/desktop/desktop_webp@1x/project_img_1@1x.webp 1x,
-                        ./images/desktop/desktop_webp@2x/project_img_1@2x.webp 2x
+                        ./images/mobile/mobile_webp@1x/mob_project_img_1@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_1@2x.webp 2x
                       "
-                      media="(min-width: 1200px)"
+                      media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <img
                       class="gallery__img"
                       src="./images/desktop/desktop@1x/project_img_1.jpg"
                       alt="Ноутбук с открытым на нем сайтом"
-                      width="370"
-                      height="294"
                     />
                   </picture>
                   <p class="gallery__paragraph">
@@ -133,10 +165,10 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/mobile/mobile_webp@1x/mob_project_img_2@1x.webp 1x,
-                        ./images/mobile/mobile_webp@2x/mob_project_img_2@2x.webp 2x
+                        ./images/desktop/desktop_webp@1x/project_img_2@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_2@2x.webp 2x
                       "
-                      media="(max-width: 480px)"
+                      media="(min-width: 1200px)"
                       type="image/webp"
                     />
                     <source
@@ -144,23 +176,21 @@
                         ./images/tablet/tablet_webp@1x/tabl_project_img_2@1x.webp 1x,
                         ./images/tablet/tablet_webp@2x/tabl_project_img_2@2x.webp 2x
                       "
-                      media="(max-width: 1199px)"
+                      media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/desktop/desktop_webp@1x/project_img_2@1x.webp 1x,
-                        ./images/desktop/desktop_webp@2x/project_img_2@2x.webp 2x
+                        ./images/mobile/mobile_webp@1x/mob_project_img_2@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_2@2x.webp 2x
                       "
-                      media="(min-width: 1200px)"
+                      media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <img
                       class="gallery__img"
                       src="./images/desktop/desktop@1x/project_img_2.jpg"
                       alt="Постер с баскетболистами"
-                      width="370"
-                      height="294"
                     />
                   </picture>
                   <p class="gallery__paragraph">
@@ -183,10 +213,10 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/mobile/mobile_webp@1x/mob_project_img_3@1x.webp 1x,
-                        ./images/mobile/mobile_webp@2x/mob_project_img_3@2x.webp 2x
+                        ./images/desktop/desktop_webp@1x/project_img_3@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_3@2x.webp 2x
                       "
-                      media="(max-width: 480px)"
+                      media="(min-width: 1200px)"
                       type="image/webp"
                     />
                     <source
@@ -194,23 +224,21 @@
                         ./images/tablet/tablet_webp@1x/tabl_project_img_3@1x.webp 1x,
                         ./images/tablet/tablet_webp@2x/tabl_project_img_3@2x.webp 2x
                       "
-                      media="(max-width: 1199px)"
+                      media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/desktop/desktop_webp@1x/project_img_3@1x.webp 1x,
-                        ./images/desktop/desktop_webp@2x/project_img_3@2x.webp 2x
+                        ./images/mobile/mobile_webp@1x/mob_project_img_3@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_3@2x.webp 2x
                       "
-                      media="(min-width: 1200px)"
+                      media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <img
                       class="gallery__img"
                       src="./images/desktop/desktop@1x/project_img_3.jpg"
                       alt="Логотип ресторана"
-                      width="370"
-                      height="294"
                     />
                   </picture>
                   <p class="gallery__paragraph">
@@ -231,10 +259,10 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/mobile/mobile_webp@1x/mob_project_img_4@1x.webp 1x,
-                        ./images/mobile/mobile_webp@2x/mob_project_img_4@2x.webp 2x
+                        ./images/desktop/desktop_webp@1x/project_img_4@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_4@2x.webp 2x
                       "
-                      media="(max-width: 480px)"
+                      media="(min-width: 1200px)"
                       type="image/webp"
                     />
                     <source
@@ -242,23 +270,21 @@
                         ./images/tablet/tablet_webp@1x/tabl_project_img_4@1x.webp 1x,
                         ./images/tablet/tablet_webp@2x/tabl_project_img_4@2x.webp 2x
                       "
-                      media="(max-width: 1199px)"
+                      media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/desktop/desktop_webp@1x/project_img_4@1x.webp 1x,
-                        ./images/desktop/desktop_webp@2x/project_img_4@2x.webp 2x
+                        ./images/mobile/mobile_webp@1x/mob_project_img_4@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_4@2x.webp 2x
                       "
-                      media="(min-width: 1200px)"
+                      media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <img
                       class="gallery__img"
                       src="./images/desktop/desktop@1x/project_img_4.jpg"
                       alt="Аудио наушники"
-                      width="370"
-                      height="294"
                     />
                   </picture>
                   <p class="gallery__paragraph">
@@ -279,10 +305,10 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/mobile/mobile_webp@1x/mob_project_img_5@1x.webp 1x,
-                        ./images/mobile/mobile_webp@2x/mob_project_img_5@2x.webp 2x
+                        ./images/desktop/desktop_webp@1x/project_img_5@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_5@2x.webp 2x
                       "
-                      media="(max-width: 480px)"
+                      media="(min-width: 1200px)"
                       type="image/webp"
                     />
                     <source
@@ -290,23 +316,21 @@
                         ./images/tablet/tablet_webp@1x/tabl_project_img_5@1x.webp 1x,
                         ./images/tablet/tablet_webp@2x/tabl_project_img_5@2x.webp 2x
                       "
-                      media="(max-width: 1199px)"
+                      media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/desktop/desktop_webp@1x/project_img_5@1x.webp 1x,
-                        ./images/desktop/desktop_webp@2x/project_img_5@2x.webp 2x
+                        ./images/mobile/mobile_webp@1x/mob_project_img_5@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_5@2x.webp 2x
                       "
-                      media="(min-width: 1200px)"
+                      media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <img
                       class="gallery__img"
                       src="./images/desktop/desktop@1x/project_img_5.jpg"
                       alt="Две картонные коробки"
-                      width="370"
-                      height="294"
                     />
                   </picture>
                   <p class="gallery__paragraph">
@@ -327,10 +351,10 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/mobile/mobile_webp@1x/mob_project_img_6@1x.webp 1x,
-                        ./images/mobile/mobile_webp@2x/mob_project_img_6@2x.webp 2x
+                        ./images/desktop/desktop_webp@1x/project_img_6@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_6@2x.webp 2x
                       "
-                      media="(max-width: 480px)"
+                      media="(min-width: 1200px)"
                       type="image/webp"
                     />
                     <source
@@ -338,24 +362,22 @@
                         ./images/tablet/tablet_webp@1x/tabl_project_img_6@1x.webp 1x,
                         ./images/tablet/tablet_webp@2x/tabl_project_img_6@2x.webp 2x
                       "
-                      media="(max-width: 1199px)"
+                      media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/desktop/desktop_webp@1x/project_img_6@1x.webp 1x,
-                        ./images/desktop/desktop_webp@2x/project_img_6@2x.webp 2x
+                        ./images/mobile/mobile_webp@1x/mob_project_img_6@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_6@2x.webp 2x
                       "
-                      media="(min-width: 1200px)"
+                      media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <img
                       class="gallery__img"
                       src="./images/desktop/desktop@1x/project_img_6.jpg"
                       alt="Монитор с открытым на нем сайтом"
-                      width="370"
-                      height="294"
-                    />
+                      />
                   </picture>
                   <p class="gallery__paragraph">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -375,10 +397,10 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/mobile/mobile_webp@1x/mob_project_img_7@1x.webp 1x,
-                        ./images/mobile/mobile_webp@2x/mob_project_img_7@2x.webp 2x
+                        ./images/desktop/desktop_webp@1x/project_img_7@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_7@2x.webp 2x
                       "
-                      media="(max-width: 480px)"
+                      media="(min-width: 1200px)"
                       type="image/webp"
                     />
                     <source
@@ -386,24 +408,21 @@
                         ./images/tablet/tablet_webp@1x/tabl_project_img_7@1x.webp 1x,
                         ./images/tablet/tablet_webp@2x/tabl_project_img_7@2x.webp 2x
                       "
-                      media="(max-width: 1199px)"
+                      media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/desktop/desktop_webp@1x/project_img_7@1x.webp 1x,
-                        ./images/desktop/desktop_webp@2x/project_img_7@2x.webp 2x
+                        ./images/mobile/mobile_webp@1x/mob_project_img_7@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_7@2x.webp 2x
                       "
-                      media="(min-width: 1200px)"
+                      media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <img
                       class="gallery__img"
                       src="./images/desktop/desktop@1x/project_img_7.jpg"
-                      alt="Женский журнал"
-                      width="370"
-                      height="294"
-                    />
+                      alt="Женский журнал"                    />
                   </picture>
                   <p class="gallery__paragraph">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -425,10 +444,10 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/mobile/mobile_webp@1x/mob_project_img_8@1x.webp 1x,
-                        ./images/mobile/mobile_webp@2x/mob_project_img_8@2x.webp 2x
+                        ./images/desktop/desktop_webp@1x/project_img_8@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_8@2x.webp 2x
                       "
-                      media="(max-width: 480px)"
+                      media="(min-width: 1200px)"
                       type="image/webp"
                     />
                     <source
@@ -436,23 +455,21 @@
                         ./images/tablet/tablet_webp@1x/tabl_project_img_8@1x.webp 1x,
                         ./images/tablet/tablet_webp@2x/tabl_project_img_8@2x.webp 2x
                       "
-                      media="(max-width: 1199px)"
+                      media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/desktop/desktop_webp@1x/project_img_8@1x.webp 1x,
-                        ./images/desktop/desktop_webp@2x/project_img_8@2x.webp 2x
+                        ./images/mobile/mobile_webp@1x/mob_project_img_8@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_8@2x.webp 2x
                       "
-                      media="(min-width: 1200px)"
+                      media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <img
                       class="gallery__img"
                       src="./images/desktop/desktop@1x/project_img_8.jpg"
                       alt="Бирка с логотипом"
-                      width="370"
-                      height="294"
                     />
                   </picture>
                   <p class="gallery__paragraph">
@@ -473,10 +490,10 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/mobile/mobile_webp@1x/mob_project_img_9@1x.webp 1x,
-                        ./images/mobile/mobile_webp@2x/mob_project_img_9@2x.webp 2x
+                        ./images/desktop/desktop_webp@1x/project_img_9@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_9@2x.webp 2x
                       "
-                      media="(max-width: 480px)"
+                      media="(min-width: 1200px)"
                       type="image/webp"
                     />
                     <source
@@ -484,23 +501,21 @@
                         ./images/tablet/tablet_webp@1x/tabl_project_img_9@1x.webp 1x,
                         ./images/tablet/tablet_webp@2x/tabl_project_img_9@2x.webp 2x
                       "
-                      media="(max-width: 1199px)"
+                      media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/desktop/desktop_webp@1x/project_img_9@1x.webp 1x,
-                        ./images/desktop/desktop_webp@2x/project_img_9@2x.webp 2x
+                        ./images/mobile/mobile_webp@1x/mob_project_img_9@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_9@2x.webp 2x
                       "
-                      media="(min-width: 1200px)"
+                      media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <img
                       class="gallery__img"
                       src="./images/desktop/desktop@1x/project_img_9.jpg"
                       alt="Человек работает за ноутбуком"
-                      width="370"
-                      height="294"
                     />
                   </picture>
                   <p class="gallery__paragraph">
@@ -519,81 +534,82 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+<footer class="footer">
       <div class="footer__box container">
-        <div>
-          <a class="logo" href="./index.html">
-            <span lang="en" class="logo__web">Web</span>
-            <span lang="en" class="logo__studio logo__studio--color">Studio</span>
-          </a>
-          <address>
-            <ul>
-              <li class="footer__address">г. Киев, пр-т Леси Украинки, 26</li>
-              <li>
-                <a class="footer__contact" href="meilto:info@example.com">info@example.com</a>
+        <div class="footer__address-box">
+          <div class="footer__logo-address-box">
+            <a class="logo" href="./index.html">
+              <span lang="en" class="logo__web">Web</span><span lang="en" class="logo__studio--color">Studio</span>
+            </a>
+            <address>
+              <ul class="footer__address-contact">
+                <li class="footer__address">г. Киев, пр-т Леси Украинки, 26</li>
+                <li>
+                  <a class="footer__contact" href="meilto:info@example.com">info@example.com</a>
+                </li>
+                <li><a class="footer__contact" href="tel:+380991111111">+38 099 111 11 11</a></li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__icon-box">
+            <span class="footer__text">Присоединяйтесь</span>
+            <ul class="soc-list soc-list__footer-box">
+              <li class="soc-list__item">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  class="soc-list__link soc-list__link--background-color"
+                >
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li><a class="footer__contact" href="tel:+380991111111">+38 099 111 11 11</a></li>
+              <li class="soc-list__item">
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  class="soc-list__link soc-list__link--background-color"
+                >
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-list__item">
+                <a
+                  href="https://facebook.com/"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  class="soc-list__link soc-list__link--background-color"
+                >
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-list__item">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  class="soc-list__link soc-list__link--background-color"
+                >
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer__icon-box">
-          <span class="footer__text">Присоединяйтесь</span>
-          <ul class="soc-list soc-list__footer-box">
-            <li class="soc-list__item">
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="nofollow noopener"
-                class="soc-list__link soc-list__link--background-color"
-              >
-                <svg class="footer__icon" width="20" height="20">
-                  <use href="./images/svg/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="soc-list__item">
-              <a
-                href="https://twitter.com/"
-                target="_blank"
-                rel="nofollow noopener"
-                class="soc-list__link soc-list__link--background-color"
-              >
-                <svg class="footer__icon" width="20" height="20">
-                  <use href="./images/svg/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="soc-list__item">
-              <a
-                href="https://facebook.com/"
-                target="_blank"
-                rel="nofollow noopener"
-                class="soc-list__link soc-list__link--background-color"
-              >
-                <svg class="footer__icon" width="20" height="20">
-                  <use href="./images/svg/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="soc-list__item">
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="nofollow noopener"
-                class="soc-list__link soc-list__link--background-color"
-              >
-                <svg class="footer__icon" width="20" height="20">
-                  <use href="./images/svg/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <form name="subs-form" class="footer__subs-form">
           <label for="mail" class="subs-form__text">Подпишитесь на рассылку</label>
           <div class="subs-form__box">
             <input class="subs-form__input" type="email" id="mail" placeholder="E-mail" />
-            <button type="submit" class="subs-form__button">
+            <button type="submit" class="subs-form__btn">
               Подписаться
               <svg class="subs-form__btn-icon" width="24" height="24">
                 <use href="./images/svg/icons.svg#icon-telegram"></use>
@@ -603,5 +619,68 @@
         </form>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+        <form>
+          <label class="modal__label">
+            <span class="modal__text">Имя</span>
+            <div class="modal__box">
+              <input class="modal__input" type="text" name="user-name" required />
+              <svg class="modal__icon" width="18" height="18">
+                <use href="./images/svg/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="modal__label">
+            <span class="modal__text">Телефон</span>
+            <div class="modal__box">
+              <input class="modal__input" type="tel" name="user-tel" required />
+              <svg class="modal__icon" width="18" height="18">
+                <use href="./images/svg/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="modal__label">
+            <span class="modal__text">Почта</span>
+            <div class="modal__box">
+              <input class="modal__input" type="email" name="user-email" required />
+              <svg class="modal__icon" width="18" height="18">
+                <use href="./images/svg/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="modal__label">
+            <span class="modal__text">Комментарий</span>
+            <textarea
+              class="modal__comment"
+              name="user-comment"
+              cols="30"
+              rows="10"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+          <label class="modal__label-checkbox">
+            <input class="modal__checkbox-hidden" type="checkbox" name="checkbox" required />
+            <span class="modal__checkbox">
+              <svg class="modal__icon-check" width="11" height="8">
+                <use href="./images/svg/icons.svg#icon-check"></use>
+              </svg>
+            </span>
+            <span class="modal__checkbox-text">
+              Соглашаюсь с рассылкой и принимаю&nbsp;<a class="modal__checkbox-link" href="./">Условия договора</a>
+            </span>
+          </label>
+        </form>
+        <button class="modal__btn" type="submit">Отправить</button>
+        <button type="button" class="modal__btn-close" data-modal-close>
+          <svg class="modal__close-icon" width="18" height="18">
+            <use href="./images/svg/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

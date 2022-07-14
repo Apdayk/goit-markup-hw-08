@@ -1,16 +1,22 @@
 .filter-btn__section {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter-btn {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  row-gap: 15px;
   &__item {
+    white-space: nowrap;
     border-radius: 4px;
     transition: box-shadow 250ms var(--time-function);
-  }
-  &__item + &__item {
-    margin-left: 8px;
   }
   &__item:hover,
   &__item:focus {
@@ -32,5 +38,8 @@
     cursor: pointer;
     @include font(500, 16px, 1.63, null);
     transition: background-color 250ms var(--time-function), color 250ms var(--time-function);
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
   }
 }
