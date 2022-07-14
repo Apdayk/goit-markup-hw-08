@@ -24,8 +24,9 @@
   left: 50%;
   width: 90%;
   max-width: 450px;
-  height: 90%;
+  height: 98%;
   max-height: 609px;
+  min-height: 480;
   margin: auto;
   padding: 40px;
 
@@ -137,7 +138,7 @@
 
   &__checkbox-text {
     @include font(null, 12px, 1.17, null);
-    white-space: nowrap;
+    margin-left: 5px;
 
     color: #757575;
   }
@@ -168,7 +169,6 @@
     width: 16px;
     height: 15px;
     @include flexCentr;
-    margin-right: 8px;
 
     border: 2px solid var(--brand-color_black);
     border-radius: 2px;

@@ -1118,8 +1118,9 @@ img {
   left: 50%;
   width: 90%;
   max-width: 450px;
-  height: 90%;
+  height: 98%;
   max-height: 609px;
+  min-height: 480;
   margin: auto;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1);
@@ -1266,7 +1267,7 @@ img {
 .modal__checkbox-text {
   font-size: 12px;
   line-height: 1.17;
-  white-space: nowrap;
+  margin-left: 5px;
   color: #757575;
 }
 .modal__checkbox-link {
@@ -1298,7 +1299,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 8px;
   border: 2px solid var(--brand-color_black);
   border-radius: 2px;
 }
