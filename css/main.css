@@ -1116,9 +1116,11 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
-  min-height: 609px;
-  margin-top: auto;
+  width: 90%;
+  max-width: 450px;
+  height: 90%;
+  max-height: 609px;
+  margin: auto;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
