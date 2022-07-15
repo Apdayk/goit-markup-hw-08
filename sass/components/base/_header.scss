@@ -1,5 +1,9 @@
 /* ----------Шапка--------- */
 .header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
+  background: var(--brand-color_white);
   &-box {
     display: flex;
     flex-grow: 1;
@@ -10,10 +14,6 @@
     &-box {
       height: 80px;
     }
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #ececec;
-    background: var(--brand-color_white);
   }
 }
 
@@ -40,6 +40,7 @@
   @media screen and(min-width:768px) {
     display: flex;
     flex-direction: row;
+    gap: 50px;
     margin-left: 83px;
     &__link {
       display: block;

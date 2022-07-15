@@ -27,6 +27,7 @@
   }
   &__text {
     display: block;
+    margin-top: 60px;
     @include font(700, 14px, 1.14, null);
     text-transform: uppercase;
     color: var(--brand-color_white);
@@ -42,7 +43,7 @@
       gap: 8px;
     }
     &__text {
-      margin-top: 60px;
+      margin-top: 0;
       text-align: center;
     }
     &__address-box {

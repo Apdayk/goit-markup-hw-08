@@ -41,6 +41,10 @@
     }
   }
   @media screen and (min-width: 1200px) {
+    &__title {
+      margin-bottom: 50px;
+      @include font(null, 36px, null, null);
+    }
     &-list {
       flex-wrap: nowrap;
     }
